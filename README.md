@@ -27,4 +27,4 @@ BOOL test = [verbEx test:URL];
 ```
 
 ## TODO
-Implement some more of the features found in the API[https://github.com/VerbalExpressions/JSVerbalExpressions/wiki "API"]
+Implement some more of the features found in the [API](https://github.com/VerbalExpressions/JSVerbalExpressions/wiki "API").
