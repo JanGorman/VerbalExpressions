@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'JGOVerbalExpressions' target in the 'JGOVerbalExpressions' project
+//
+
+#ifdef __OBJC__
+    #import <Foundation/Foundation.h>
+#endif

@@ -1,0 +1,418 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F207034317B796F100546BEA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F207034217B796F100546BEA /* Foundation.framework */; };
+		F207034817B796F100546BEA /* JGOVerbalExpressions.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = F207034717B796F100546BEA /* JGOVerbalExpressions.h */; };
+		F207034A17B796F100546BEA /* JGOVerbalExpressions.m in Sources */ = {isa = PBXBuildFile; fileRef = F207034917B796F100546BEA /* JGOVerbalExpressions.m */; };
+		F207035217B796F100546BEA /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F207035117B796F100546BEA /* SenTestingKit.framework */; };
+		F207035417B796F100546BEA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F207035317B796F100546BEA /* UIKit.framework */; };
+		F207035517B796F100546BEA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F207034217B796F100546BEA /* Foundation.framework */; };
+		F207035817B796F100546BEA /* libJGOVerbalExpressions.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F207033F17B796F100546BEA /* libJGOVerbalExpressions.a */; };
+		F207035E17B796F100546BEA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F207035C17B796F100546BEA /* InfoPlist.strings */; };
+		F207036117B796F100546BEA /* JGOVerbalExpressionsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F207036017B796F100546BEA /* JGOVerbalExpressionsTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F207035617B796F100546BEA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F207033717B796F100546BEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F207033E17B796F100546BEA;
+			remoteInfo = JGOVerbalExpressions;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		F207033D17B796F100546BEA /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/${PRODUCT_NAME}";
+			dstSubfolderSpec = 16;
+			files = (
+				F207034817B796F100546BEA /* JGOVerbalExpressions.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		F207033F17B796F100546BEA /* libJGOVerbalExpressions.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libJGOVerbalExpressions.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		F207034217B796F100546BEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		F207034617B796F100546BEA /* JGOVerbalExpressions-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JGOVerbalExpressions-Prefix.pch"; sourceTree = "<group>"; };
+		F207034717B796F100546BEA /* JGOVerbalExpressions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JGOVerbalExpressions.h; sourceTree = "<group>"; };
+		F207034917B796F100546BEA /* JGOVerbalExpressions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JGOVerbalExpressions.m; sourceTree = "<group>"; };
+		F207035017B796F100546BEA /* JGOVerbalExpressionsTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JGOVerbalExpressionsTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F207035117B796F100546BEA /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		F207035317B796F100546BEA /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		F207035B17B796F100546BEA /* JGOVerbalExpressionsTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "JGOVerbalExpressionsTests-Info.plist"; sourceTree = "<group>"; };
+		F207035D17B796F100546BEA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		F207035F17B796F100546BEA /* JGOVerbalExpressionsTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JGOVerbalExpressionsTests.h; sourceTree = "<group>"; };
+		F207036017B796F100546BEA /* JGOVerbalExpressionsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JGOVerbalExpressionsTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F207033C17B796F100546BEA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F207034317B796F100546BEA /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F207034C17B796F100546BEA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F207035217B796F100546BEA /* SenTestingKit.framework in Frameworks */,
+				F207035417B796F100546BEA /* UIKit.framework in Frameworks */,
+				F207035517B796F100546BEA /* Foundation.framework in Frameworks */,
+				F207035817B796F100546BEA /* libJGOVerbalExpressions.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F207033617B796F100546BEA = {
+			isa = PBXGroup;
+			children = (
+				F207034417B796F100546BEA /* JGOVerbalExpressions */,
+				F207035917B796F100546BEA /* JGOVerbalExpressionsTests */,
+				F207034117B796F100546BEA /* Frameworks */,
+				F207034017B796F100546BEA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F207034017B796F100546BEA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F207033F17B796F100546BEA /* libJGOVerbalExpressions.a */,
+				F207035017B796F100546BEA /* JGOVerbalExpressionsTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F207034117B796F100546BEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F207034217B796F100546BEA /* Foundation.framework */,
+				F207035117B796F100546BEA /* SenTestingKit.framework */,
+				F207035317B796F100546BEA /* UIKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F207034417B796F100546BEA /* JGOVerbalExpressions */ = {
+			isa = PBXGroup;
+			children = (
+				F207034717B796F100546BEA /* JGOVerbalExpressions.h */,
+				F207034917B796F100546BEA /* JGOVerbalExpressions.m */,
+				F207034517B796F100546BEA /* Supporting Files */,
+			);
+			path = JGOVerbalExpressions;
+			sourceTree = "<group>";
+		};
+		F207034517B796F100546BEA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F207034617B796F100546BEA /* JGOVerbalExpressions-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F207035917B796F100546BEA /* JGOVerbalExpressionsTests */ = {
+			isa = PBXGroup;
+			children = (
+				F207035F17B796F100546BEA /* JGOVerbalExpressionsTests.h */,
+				F207036017B796F100546BEA /* JGOVerbalExpressionsTests.m */,
+				F207035A17B796F100546BEA /* Supporting Files */,
+			);
+			path = JGOVerbalExpressionsTests;
+			sourceTree = "<group>";
+		};
+		F207035A17B796F100546BEA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F207035B17B796F100546BEA /* JGOVerbalExpressionsTests-Info.plist */,
+				F207035C17B796F100546BEA /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F207033E17B796F100546BEA /* JGOVerbalExpressions */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F207036417B796F100546BEA /* Build configuration list for PBXNativeTarget "JGOVerbalExpressions" */;
+			buildPhases = (
+				F207033B17B796F100546BEA /* Sources */,
+				F207033C17B796F100546BEA /* Frameworks */,
+				F207033D17B796F100546BEA /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = JGOVerbalExpressions;
+			productName = JGOVerbalExpressions;
+			productReference = F207033F17B796F100546BEA /* libJGOVerbalExpressions.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		F207034F17B796F100546BEA /* JGOVerbalExpressionsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F207036717B796F100546BEA /* Build configuration list for PBXNativeTarget "JGOVerbalExpressionsTests" */;
+			buildPhases = (
+				F207034B17B796F100546BEA /* Sources */,
+				F207034C17B796F100546BEA /* Frameworks */,
+				F207034D17B796F100546BEA /* Resources */,
+				F207034E17B796F100546BEA /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F207035717B796F100546BEA /* PBXTargetDependency */,
+			);
+			name = JGOVerbalExpressionsTests;
+			productName = JGOVerbalExpressionsTests;
+			productReference = F207035017B796F100546BEA /* JGOVerbalExpressionsTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F207033717B796F100546BEA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = "Jan Gorman";
+			};
+			buildConfigurationList = F207033A17B796F100546BEA /* Build configuration list for PBXProject "JGOVerbalExpressions" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = F207033617B796F100546BEA;
+			productRefGroup = F207034017B796F100546BEA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F207033E17B796F100546BEA /* JGOVerbalExpressions */,
+				F207034F17B796F100546BEA /* JGOVerbalExpressionsTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F207034D17B796F100546BEA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F207035E17B796F100546BEA /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		F207034E17B796F100546BEA /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F207033B17B796F100546BEA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F207034A17B796F100546BEA /* JGOVerbalExpressions.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F207034B17B796F100546BEA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F207036117B796F100546BEA /* JGOVerbalExpressionsTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F207035717B796F100546BEA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F207033E17B796F100546BEA /* JGOVerbalExpressions */;
+			targetProxy = F207035617B796F100546BEA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F207035C17B796F100546BEA /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F207035D17B796F100546BEA /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F207036217B796F100546BEA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		F207036317B796F100546BEA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F207036517B796F100546BEA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/JGOVerbalExpressions.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "JGOVerbalExpressions/JGOVerbalExpressions-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		F207036617B796F100546BEA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/JGOVerbalExpressions.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "JGOVerbalExpressions/JGOVerbalExpressions-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		F207036817B796F100546BEA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "JGOVerbalExpressions/JGOVerbalExpressions-Prefix.pch";
+				INFOPLIST_FILE = "JGOVerbalExpressionsTests/JGOVerbalExpressionsTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		F207036917B796F100546BEA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "JGOVerbalExpressions/JGOVerbalExpressions-Prefix.pch";
+				INFOPLIST_FILE = "JGOVerbalExpressionsTests/JGOVerbalExpressionsTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F207033A17B796F100546BEA /* Build configuration list for PBXProject "JGOVerbalExpressions" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F207036217B796F100546BEA /* Debug */,
+				F207036317B796F100546BEA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F207036417B796F100546BEA /* Build configuration list for PBXNativeTarget "JGOVerbalExpressions" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F207036517B796F100546BEA /* Debug */,
+				F207036617B796F100546BEA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		F207036717B796F100546BEA /* Build configuration list for PBXNativeTarget "JGOVerbalExpressionsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F207036817B796F100546BEA /* Debug */,
+				F207036917B796F100546BEA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F207033717B796F100546BEA /* Project object */;
+}
