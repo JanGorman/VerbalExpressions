@@ -1,7 +1,7 @@
 VerbalExpressions
 =================
 
-## Objective-C Verbal Expressions made easy
+## Objective-C regular expressions made easy
 A library to help you construct regular expressions in Objective-C. Based on the excellent [JSVerbalExpressions](https://github.com/VerbalExpressions/JSVerbalExpressions "JSVerbalExpressions").
 
 ## Installation
