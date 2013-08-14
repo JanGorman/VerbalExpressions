@@ -9,7 +9,7 @@
 #import "JGOVerbalExpressions.h"
 
 @interface JGOVerbalExpressions () {
-    int options;
+    NSRegularExpressionOptions options;
     NSString *prefixes;
     NSString *suffixes;
     NSMutableString *source;
@@ -34,7 +34,7 @@ JGOVerbalExpressions *VerEx() {
 }
 
 - (JGOVerbalExpressions *)add:(NSString *)string {
-    [source appendString:[NSRegularExpression escapedPatternForString:string]];
+    [source appendString:string];
     return self;
 }
 
@@ -64,6 +64,15 @@ JGOVerbalExpressions *VerEx() {
 - (JGOVerbalExpressions *)maybe:(NSString *)string {
     return [self add:string withFormat:@"(%@)?"];
 }
+
+- (JGOVerbalExpressions *)lineBreak {
+    return [self add:@"(?:\\n|(?:\\r\\n))"];
+}
+
+- (JGOVerbalExpressions *)br {
+    return self.lineBreak;
+}
+
 
 - (JGOVerbalExpressions *)anything {
     [source appendString:@"(.*)"];
@@ -113,7 +122,7 @@ JGOVerbalExpressions *VerEx() {
         suffixes = [suffixes stringByAppendingString:[NSString stringWithFormat:@")%@", suffixes]];
     }
 
-    [self add:@")|("];
+    [self add:@")|(?:"];
 
     return string ? [self then:string] : self;
 }
@@ -133,11 +142,17 @@ JGOVerbalExpressions *VerEx() {
         case 'x':
             options |= NSRegularExpressionAllowCommentsAndWhitespace;
             break;
+        case 'm':
+            options |= NSRegularExpressionAnchorsMatchLines;
+            break;
         case 's':
             options |= NSRegularExpressionDotMatchesLineSeparators;
             break;
-        case 'U':
+        case 'u':
             options |= NSRegularExpressionUseUnicodeWordBoundaries;
+            break;
+        case 'U':
+            options |= NSRegularExpressionIgnoreMetacharacters;
             break;
         default:
             break;
@@ -157,11 +172,17 @@ JGOVerbalExpressions *VerEx() {
         case 'x':
             options ^= NSRegularExpressionAllowCommentsAndWhitespace;
             break;
+        case 'm':
+            options ^= NSRegularExpressionAnchorsMatchLines;
+            break;
         case 's':
             options ^= NSRegularExpressionDotMatchesLineSeparators;
             break;
-        case 'U':
+        case 'u':
             options ^= NSRegularExpressionUseUnicodeWordBoundaries;
+            break;
+        case 'U':
+            options ^= NSRegularExpressionIgnoreMetacharacters;
             break;
         default:
             break;

@@ -22,6 +22,10 @@ extern JGOVerbalExpressions *VerEx();
 
 - (JGOVerbalExpressions *)maybe:(NSString *)string;
 
+- (JGOVerbalExpressions *)lineBreak;
+
+- (JGOVerbalExpressions *)br;
+
 - (JGOVerbalExpressions *)anything;
 
 - (JGOVerbalExpressions *)something;

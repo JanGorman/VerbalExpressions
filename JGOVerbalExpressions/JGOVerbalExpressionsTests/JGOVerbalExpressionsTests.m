@@ -72,4 +72,18 @@
     STAssertTrue([tester test:valid], nil);
 }
 
+- (void)testLineBreak {
+    JGOVerbalExpressions *tester = [[[[VerEx() startOfLine] then:@"foo"] lineBreak] then:@"bar"];
+
+    NSString *invalid = @"foobar";
+
+    STAssertFalse([tester test:invalid], nil);
+
+    NSString *valid = @"foo\r\nbar";
+
+    NSLog(@"%@", tester);
+
+    STAssertTrue([tester test:valid], nil);
+}
+
 @end
