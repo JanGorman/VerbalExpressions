@@ -50,6 +50,8 @@ extern JGOVerbalExpressions *VerEx();
 
 - (JGOVerbalExpressions *)removeModifier:(char)modifier;
 
+- (JGOVerbalExpressions *)withAnyCase;
+
 - (BOOL)test:(NSString *)stringToTest;
 
 - (NSString *)description;

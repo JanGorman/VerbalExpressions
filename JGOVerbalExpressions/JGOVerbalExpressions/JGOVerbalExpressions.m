@@ -195,6 +195,10 @@ JGOVerbalExpressions *VerEx() {
     return self;
 }
 
+- (JGOVerbalExpressions *)withAnyCase {
+    return [self addModifier:'i'];
+}
+
 - (NSRegularExpression *)getExpression:(NSError **)error {
     NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:[NSString stringWithFormat:@"%@%@%@", prefixes,
                                                                                                               source, suffixes]
@@ -202,6 +206,7 @@ JGOVerbalExpressions *VerEx() {
                                                                              error:error];
     return regex;
 }
+
 
 - (BOOL)test:(NSString *)stringToTest {
     NSError *error;
