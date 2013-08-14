@@ -89,8 +89,13 @@ JGOVerbalExpressions *VerEx() {
 }
 
 - (JGOVerbalExpressions *)tab {
-    return [self add:@"\t"];
+    return [self add:@"\\t"];
 }
+
+- (JGOVerbalExpressions *)word {
+    return [self add:@"\\w+"];
+}
+
 
 - (JGOVerbalExpressions *)anyOf:(NSString *)string {
     return [self add:string withFormat:@"[%@]"];

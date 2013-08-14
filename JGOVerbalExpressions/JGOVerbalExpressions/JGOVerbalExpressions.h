@@ -34,6 +34,8 @@ extern JGOVerbalExpressions *VerEx();
 
 - (JGOVerbalExpressions *)tab;
 
+- (JGOVerbalExpressions *)word;
+
 - (JGOVerbalExpressions *)anyOf:(NSString *)string;
 
 - (JGOVerbalExpressions *)any:(NSString *)string;

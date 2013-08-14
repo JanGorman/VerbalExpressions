@@ -81,7 +81,29 @@
 
     NSString *valid = @"foo\r\nbar";
 
-    NSLog(@"%@", tester);
+    STAssertTrue([tester test:valid], nil);
+}
+
+- (void)testTab {
+    JGOVerbalExpressions *tester = [[[[VerEx() startOfLine] then:@"foo"] tab] then:@"bar"];
+
+    NSString *invalid = @"foobar";
+
+    STAssertFalse([tester test:invalid], nil);
+
+    NSString *valid = @"foo\tbar";
+
+    STAssertTrue([tester test:valid], nil);
+}
+
+- (void)testWord {
+    JGOVerbalExpressions *tester = [VerEx() word];
+
+    NSString *invalid = @"$^&";
+
+    STAssertFalse([tester test:invalid], nil);
+
+    NSString *valid = @"word ";
 
     STAssertTrue([tester test:valid], nil);
 }
