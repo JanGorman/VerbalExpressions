@@ -19,6 +19,10 @@
 
 @implementation JGOVerbalExpressions
 
+JGOVerbalExpressions *VerEx() {
+    return [[JGOVerbalExpressions alloc] init];
+}
+
 - (instancetype)init {
     if (self = [super init]) {
         options = 0;
@@ -161,18 +165,25 @@
     return self;
 }
 
-
-- (BOOL)test:(NSString *)stringToTest {
-    NSError *error;
+- (NSRegularExpression *)getExpression:(NSError **)error {
     NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:[NSString stringWithFormat:@"%@%@%@", prefixes,
                                                                                                               source, suffixes]
                                                                            options:options
-                                                                             error:&error];
+                                                                             error:error];
+    return regex;
+}
+
+- (BOOL)test:(NSString *)stringToTest {
+    NSError *error;
+    NSRegularExpression *regex = [self getExpression:&error];
 
     NSAssert(!error, @"Invalid regular expression");
 
     return [regex numberOfMatchesInString:stringToTest options:0 range:NSMakeRange(0, stringToTest.length)] > 0;
 }
 
+- (NSString *)description {
+    return [self getExpression:nil].pattern;
+}
 
 @end

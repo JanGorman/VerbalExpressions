@@ -11,15 +11,12 @@
 
 @interface JGOVerbalExpressionsTests ()
 
-@property(nonatomic, strong) JGOVerbalExpressions *verbEx;
-
 @end
 
 @implementation JGOVerbalExpressionsTests
 
 - (void)setUp {
     [super setUp];
-    self.verbEx = [[JGOVerbalExpressions alloc] init];
 }
 
 - (void)tearDown {
@@ -27,51 +24,52 @@
 }
 
 - (void)testURL {
-    [[[[[self.verbEx.startOfLine
+    JGOVerbalExpressions *tester = [[[[[[VerEx().startOfLine
             then:@"http"]
             maybe:@"s"]
             then:@"://"]
             maybe:@"www."]
-            anythingBut:@" "].endOfLine;
+            anythingBut:@" "]
+            endOfLine];
 
     NSString *valid = @"http://www.google.com";
 
-    STAssertTrue([self.verbEx test:valid], nil);
+    STAssertTrue([tester test:valid], nil);
 
     NSString *invalid = @"http://www.google .com";
 
-    STAssertFalse([self.verbEx test:invalid], nil);
+    STAssertFalse([tester test:invalid], nil);
 }
 
 - (void)testSomething {
-    self.verbEx.something;
+    JGOVerbalExpressions *tester = VerEx().something;
 
     NSString *valid = @"This string contains something";
 
-    STAssertTrue([self.verbEx test:valid], nil);
+    STAssertTrue([tester test:valid], nil);
 }
 
 - (void)testCaseInsensitive {
-    [[self.verbEx any:@"a"] addModifier:'i'];
+    JGOVerbalExpressions *tester = [[VerEx() any:@"a"] addModifier:'i'];
 
     NSString *valid = @"AAAA";
 
-    STAssertTrue([self.verbEx test:valid], nil);
+    STAssertTrue([tester test:valid], nil);
 
-    [self.verbEx removeModifier:'i'];
+    [tester removeModifier:'i'];
 
-    STAssertFalse([self.verbEx test:valid], nil);
+    STAssertFalse([tester test:valid], nil);
 }
 
 - (void)testCaseSensitive {
-    [self.verbEx any:@"a"];
+    JGOVerbalExpressions *tester = [VerEx() any:@"a"];
 
     NSString *invalid = @"AAAA";
 
-    STAssertFalse([self.verbEx test:invalid], nil);
+    STAssertFalse([tester test:invalid], nil);
 
     NSString *valid = @"aaaa";
-    STAssertTrue([self.verbEx test:valid], nil);
+    STAssertTrue([tester test:valid], nil);
 }
 
 @end

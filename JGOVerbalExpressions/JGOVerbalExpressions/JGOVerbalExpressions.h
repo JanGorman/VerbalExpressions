@@ -10,6 +10,8 @@
 
 @interface JGOVerbalExpressions : NSObject
 
+extern JGOVerbalExpressions *VerEx();
+
 - (JGOVerbalExpressions *)startOfLine;
 
 - (JGOVerbalExpressions *)endOfLine;
@@ -41,5 +43,7 @@
 - (JGOVerbalExpressions *)removeModifier:(char)modifier;
 
 - (BOOL)test:(NSString *)stringToTest;
+
+- (NSString *)description;
 
 @end

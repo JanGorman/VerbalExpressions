@@ -12,18 +12,20 @@ Add JGOVerbalExpressions.h and JGOVerbalExpressions.m to your project.
 ### Test if we have a valid URL 
 ```Objective-C
 
-JGOVerbalExpressions* verbEx = [[JGOVerbalExpressions alloc] init];
-
-[[[[[verbEx.startOfLine
-       then:@"http"]
-      maybe:@"s"]
-       then:@"://"]
-      maybe:@"www."]
-anythingBut:@" "].endOfLine;
+JGOVerbalExpressions *tester = [[[[[[VerEx().startOfLine
+        then:@"http"]
+        maybe:@"s"]
+        then:@"://"]
+        maybe:@"www."]
+        anythingBut:@" "]
+        endOfLine];
 
 NSString *URL = @"http://www.google.com";
 
-BOOL test = [verbEx test:URL];
+BOOL test = [tester test:URL];
+
+// Display the pattern used
+NSLog("%@", teser);
 ```
 
 ## TODO
