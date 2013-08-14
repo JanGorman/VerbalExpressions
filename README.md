@@ -11,7 +11,6 @@ Add JGOVerbalExpressions.h and JGOVerbalExpressions.m to your project.
 
 ### Test if we have a valid URL 
 ```Objective-C
-
 JGOVerbalExpressions *tester = [[[[[[VerEx().startOfLine
         then:@"http"]
         maybe:@"s"]
@@ -25,7 +24,18 @@ NSString *URL = @"http://www.google.com";
 BOOL test = [tester test:URL];
 
 // Display the pattern used
-NSLog("%@", teser);
+NSLog(@"%@", teser);
+```
+
+### Replacing strings
+```Objective-C
+NSString *string = @"Replace bird with a duck";
+
+JGOVerbalExpressions *expression = [VerEx() find:@"bird"];
+
+NSString *result = [expression replace:string with:@"duck"];
+
+NSLog(@"%@", result);
 ```
 
 ## TODO
