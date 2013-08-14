@@ -18,6 +18,8 @@ extern JGOVerbalExpressions *VerEx();
 
 - (JGOVerbalExpressions *)then:(NSString *)string;
 
+- (JGOVerbalExpressions *)find:(NSString *)string;
+
 - (JGOVerbalExpressions *)maybe:(NSString *)string;
 
 - (JGOVerbalExpressions *)anything;

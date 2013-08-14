@@ -57,6 +57,10 @@ JGOVerbalExpressions *VerEx() {
     return [self add:string withFormat:@"(%@)"];
 }
 
+- (JGOVerbalExpressions *)find:(NSString *)string {
+    return [self then:string];
+}
+
 - (JGOVerbalExpressions *)maybe:(NSString *)string {
     return [self add:string withFormat:@"(%@)?"];
 }
