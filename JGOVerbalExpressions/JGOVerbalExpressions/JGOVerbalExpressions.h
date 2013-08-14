@@ -54,6 +54,8 @@ extern JGOVerbalExpressions *VerEx();
 
 - (BOOL)test:(NSString *)stringToTest;
 
+- (NSString *)replace:(NSString *)string with:(NSString *)with;
+
 - (NSString *)description;
 
 @end

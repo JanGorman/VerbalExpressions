@@ -120,7 +120,7 @@ JGOVerbalExpressions *VerEx() {
 
 - (JGOVerbalExpressions *)or:(NSString *)string {
     if ([prefixes rangeOfString:@"("].location == NSNotFound) {
-        prefixes = [prefixes stringByAppendingString:@"("];
+        prefixes = [prefixes stringByAppendingString:@"(?:"];
     }
 
     if ([suffixes rangeOfString:@")"].location == NSNotFound) {
@@ -216,6 +216,15 @@ JGOVerbalExpressions *VerEx() {
 
     return [regex numberOfMatchesInString:stringToTest options:0 range:NSMakeRange(0, stringToTest.length)] > 0;
 }
+
+- (NSString *)replace:(NSString *)string with:(NSString *)with {
+    NSRegularExpression *regex = [self getExpression:nil];
+    return [regex stringByReplacingMatchesInString:string
+                                           options:options
+                                             range:NSMakeRange(0, string.length)
+                                      withTemplate:with];
+}
+
 
 - (NSString *)description {
     return [self getExpression:nil].pattern;

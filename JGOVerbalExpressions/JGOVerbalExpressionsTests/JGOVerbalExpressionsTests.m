@@ -108,4 +108,14 @@
     STAssertTrue([tester test:valid], nil);
 }
 
+- (void)testReplace {
+    NSString *string = @"Replace bird with a duck";
+
+    JGOVerbalExpressions *expression = [VerEx() find:@"bird"];
+
+    NSString *result = [expression replace:string with:@"duck"];
+
+    STAssertEqualObjects(@"Replace duck with a duck", result, nil);
+}
+
 @end
